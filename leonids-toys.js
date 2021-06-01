@@ -24,3 +24,22 @@ const dolls = [
         price: 110,
     },
 ];
+
+// adding new toys
+const bittyBaby = {
+    id: 4,
+    name: 'bitty baby',
+    maker: 'americanGirl',
+    type: 'bitty baby',
+    soldBy: 'amazon',
+    price: 60,
+};
+
+const kira = {
+    id: 5,
+    name: 'Kira',
+    maker: 'americanGirl',
+    type: 'Girl of the Year 2021',
+    soldBy: 'amazon',
+    price: 32,
+};
