@@ -2,7 +2,7 @@ const dolls = [
     {
         id: 1,
         name: 'Kendall',
-        maker: 'americanGirl',
+        maker: 'American Girl',
         type: 'WellieWishers',
         soldBy: 'amazon',
         price: 24,
@@ -10,7 +10,7 @@ const dolls = [
     {
         id: 2,
         name: 'Samantha 1905',
-        maker: 'americanGirl',
+        maker: 'American Girl',
         type: 'historical characters',
         soldBy: 'ebay',
         price: 150,
@@ -18,7 +18,7 @@ const dolls = [
     {
         id: 3,
         name: 'Courtney 1986',
-        maker: 'americanGirl',
+        maker: 'American Girl',
         type: 'historical characters',
         soldBy: 'aliexpress',
         price: 110,
@@ -29,7 +29,7 @@ const dolls = [
 const bittyBaby = {
     id: 4,
     name: 'bitty baby',
-    maker: 'americanGirl',
+    maker: 'American Girl',
     type: 'bitty baby',
     soldBy: 'amazon',
     price: 60,
@@ -38,8 +38,15 @@ const bittyBaby = {
 const kira = {
     id: 5,
     name: 'Kira',
-    maker: 'americanGirl',
+    maker: 'American Girl',
     type: 'Girl of the Year 2021',
     soldBy: 'amazon',
     price: 32,
 };
+
+// added loop function
+for (const doll of dolls) {
+    console.log(
+        `${doll.name} the ${doll.type} doll is on sale for $${doll.price} on ${doll.soldBy}!`
+    );
+}
