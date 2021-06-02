@@ -4,22 +4,22 @@ const dolls = [
         name: 'Kendall',
         maker: 'American Girl',
         type: 'WellieWishers',
-        soldBy: 'amazon',
-        price: 24,
+        soldBy: 'aliexpress',
+        price: 60,
     },
     {
         id: 2,
-        name: 'Samantha 1905',
+        name: 'Samantha 1904',
         maker: 'American Girl',
-        type: 'historical characters',
-        soldBy: 'ebay',
+        type: 'Historical Characters',
+        soldBy: 'amazon',
         price: 150,
     },
     {
         id: 3,
         name: 'Courtney 1986',
         maker: 'American Girl',
-        type: 'historical characters',
+        type: 'Historical Characters',
         soldBy: 'aliexpress',
         price: 110,
     },
@@ -41,12 +41,43 @@ const kira = {
     maker: 'American Girl',
     type: 'Girl of the Year 2021',
     soldBy: 'amazon',
-    price: 32,
+    price: 110,
 };
+
+dolls.push(bittyBaby, kira);
+
+const addy = {
+    name: 'Addy 1864',
+    maker: 'American Girl',
+    type: 'Historical Characters',
+    soldBy: 'amazon',
+    price: 150,
+};
+
+const addDollToInventory = (dollObject) => {
+    const lastIndex = dolls.length - 1;
+    const currentLastDoll = dolls[lastIndex];
+    const maxId = currentLastDoll.id;
+    const idForNewDoll = maxId + 1;
+
+    dollObject.id = idForNewDoll;
+    dolls.push(dollObject);
+};
+
+addDollToInventory(addy);
+
+// price increase of 5%
+for (const doll of dolls) {
+    doll.price = doll.price * 1.05;
+}
+// doll finder function
+const dollToFind = 6;
 
 // added loop function
 for (const doll of dolls) {
-    console.log(
-        `${doll.name} the ${doll.type} doll is on sale for $${doll.price} on ${doll.soldBy}!`
-    );
+    if (doll.id === dollToFind) {
+        console.log(
+            `${doll.name} the ${doll.type} doll is on sale for $${doll.price} on ${doll.soldBy}!`
+        );
+    }
 }
